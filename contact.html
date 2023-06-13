@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add any additional custom styles here */
+    .contact-info {
+      margin-top: 20px;
+    }
+    .confirmation-message {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+  <link href="style.css" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" href="images/favicon.ico"/>
+</head>
+<body>
+  <div class="container">
+	  <nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="index.html"><strong><img src="images/Screenshot 2023-06-01 224017.jpg" alt="" width="70" height="50" class="rounded"/></strong>&nbsp;</a><br>
+  	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+  	        <ul class="navbar-nav mr-auto">
+  	          <li class="nav-item active"> <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="about.html">About Us&nbsp;</a> </li>
+  	          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="products.html" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Products&nbsp; </a>
+  	            <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Gaming computers</a> <a class="dropdown-item" href="#">Laptops</a><a class="dropdown-item" href="#">Gaming Keyboards</a><a class="dropdown-item" href="#">Gaming Mouse</a><a class="dropdown-item" href="#">Headsets</a>
+  	              <div class="dropdown-divider"></div>
+  	              <a class="dropdown-item" href="#">Other Accessories</a></div>
+              </li>
+  	          <li class="nav-item"> <a class="nav-link" href="contact.html">Contact us&nbsp;</a></li>
+            </ul>
+  	        <form class="form-inline my-2 my-lg-0">
+  	          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  	          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+    <div class="jumbotron mt-4">
+      <h1 class="display-4 text-uppercase"><strong>contact Us</strong></h1>
+<p class="lead">Welcome to DIGITAL OASIS! We are dedicated to providing high-quality computer products and services to our valued customers.</p>
+    </div>
+<div class="row">
+    <div class="col-md-6">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button><br>
+      </form>
+<div class="confirmation-message" id="confirmationMessage">
+        <p>Thank you for your message! We will get back to you soon.</p>
+        </div>
+    </div>
+      
+      <div class="col-md-6">
+        <h3>Contact Information:</h3>
+        <div class="contact-info">
+          <p><strong>Address:</strong> 159/1, Wellaveediya road,Gonawala,Kelaniya&nbsp;</p>
+          <p><strong>Phone:</strong> +94715566135</p>
+          <p><strong>Email:</strong> info@digitaloasis.com</p>
+        </div>
+      </div>
+    </div>
+	   <footer> 
+  <p class="text-center"> <br>
+    © 2023 DIGITAL OASIS ALL RIGHTS RESERVED.</p>
+	  </footer> 
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+      // Handle form submission
+      $("#contactForm").submit(function(e) {
+        e.preventDefault();
+
+        // Send form data to server (replace with your own backend code)
+        var formData = $(this).serialize();
+        // Here, you can make an AJAX request or handle the form submission according to your needs
+        
+        // Show confirmation message
+        $("#confirmationMessage").show();
+
+        // Reset form
+        $("#contactForm")[0].reset();
+      });
+    });
+  </script>
+</body>
+</html>
+
